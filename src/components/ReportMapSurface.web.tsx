@@ -8,7 +8,7 @@ export default function ReportMapSurface({ reports, selectedId, onSelectReport }
     <View style={styles.webFallback}>
       <View style={styles.webFallbackIcon}><Text style={styles.webFallbackSymbol}>⌖</Text></View>
       <Text style={styles.webFallbackTitle}>Peta tersedia di aplikasi mobile</Text>
-      <Text style={styles.webFallbackText}>Di web, laporan tetap bisa dilihat dan dibuat. Buka Expo Go di Android/iOS untuk peta interaktif.</Text>
+      <Text style={styles.webFallbackText}>Di web, laporan tetap bisa dilihat dan dibuat. Aktifkan lokasi untuk menghitung jarak; buka Expo Go di Android/iOS untuk peta interaktif.</Text>
       <View style={styles.webReportList}>
         {reports.slice(0, 5).map((report) => (
           <Pressable key={report.id} onPress={() => onSelectReport(report.id)} style={styles.webReportRow}>

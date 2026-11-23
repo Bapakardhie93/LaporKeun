@@ -43,7 +43,13 @@ export default function MapScreen() {
         <Pressable
           accessibilityRole="button"
           accessibilityLabel="Pusatkan peta ke lokasi pengguna"
-          onPress={() => setCenterRequest((current) => current + 1)}
+          onPress={() => {
+            if (!location.coordinate) {
+              void location.startTracking();
+              return;
+            }
+            setCenterRequest((current) => current + 1);
+          }}
           style={({ pressed }) => [styles.locateButton, pressed && styles.pressed]}
         >
           <Text style={styles.locateIcon}>⌖</Text>

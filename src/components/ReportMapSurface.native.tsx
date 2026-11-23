@@ -80,8 +80,8 @@ export default function ReportMapSurface({
       <View pointerEvents="none" style={styles.mapTopLabel}>
         <View style={styles.mapTopIcon}><Text style={styles.mapTopIconText}>⌖</Text></View>
         <View>
-          <Text style={styles.mapTopTitle}>{userCoordinate ? 'Lokasi Anda' : 'Area Bandung'}</Text>
-          <Text style={styles.mapTopCaption}>{tracking ? 'GPS aktif · posisi diperbarui' : 'Titik laporan di sekitar Anda'}</Text>
+          <Text style={styles.mapTopTitle}>{userCoordinate ? 'Lokasi Anda' : 'Area awal laporan'}</Text>
+          <Text style={styles.mapTopCaption}>{tracking ? 'GPS aktif · posisi diperbarui' : 'Aktifkan lokasi untuk memusatkan peta'}</Text>
         </View>
       </View>
       <View pointerEvents="none" style={styles.legend}>
