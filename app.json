@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "LaporKeun",
-    "slug": "LaporKeun",
+    "slug": "laporkeun",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -25,6 +25,21 @@
     },
     "plugins": [
       "expo-router",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "LaporKeun menggunakan lokasi Anda untuk menampilkan posisi pada peta dan menghitung jarak ke laporan terdekat."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "LaporKeun menggunakan foto untuk melengkapi laporan kondisi lingkungan.",
+          "cameraPermission": "LaporKeun menggunakan kamera untuk memotret kondisi lingkungan.",
+          "microphonePermission": false
+        }
+      ],
+      "react-native-maps",
       [
         "expo-splash-screen",
         {
